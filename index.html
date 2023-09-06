@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+echo "start"
+cat <<EOF > index.html
 <html>
 
 <head>
@@ -46,3 +47,8 @@
 </body>
 
 </html>
+EOF
+echo "finish"
+ls -la
+echo "-------------------deploy----------------"
+scp -v -o StrictHostKeyChecking=no index.html ubuntu@13.48.106.116:/var/www/html
