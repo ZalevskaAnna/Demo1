@@ -1,0 +1,53 @@
+echo "start"
+cat <<EOF > index.html
+<html>
+
+<head>
+  <title>What is Jenkins?</title>
+  <link href="site.css" type="text/css" />
+  <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+
+<body class="theme-default aui-theme-default">
+  <div id="page">
+    <div id="main" class="aui-page-panel">
+      <div id="main-header">
+        <h1 id="title-heading" class="pagetitle">
+          <img src="https://www.jenkins.io/images/logos/jenkins/jenkins.png" height="100" border="0" align="absmiddle"
+            alt="Home Page" style="float: none; vertical-align: middle;" />
+          <span id="title-text">
+            What is Jenkins?
+          </span>
+        </h1>
+      </div>
+
+      <div id="content" class="view">
+
+        <div id="main-content" class="wiki-content group">
+          <p>Jenkins is a self-contained, open source automation server which can be used to automate all sorts of tasks related to building, testing, and delivering or deploying software.</p>
+          Jenkins can be installed through native system packages, Docker, or even run standalone by any machine with a Java Runtime Environment (JRE) installed.</p>
+          <p><b>What is continuous integration?</b></p>
+          <p> <b>Continuous Integration</b> is a development practice that requires developers to regularly integrate code into a shared repository.</p>
+          <p>This concept was intended to address the problem of later detection of issues in the build life cycle.</p>
+          <p>Continuous Integration requires developers to build frequently.</p>
+          <p>The usual practice is that whenever a code commit occurs, a build should run.</p>
+            
+        </div>
+          <p>Jenkins can be accessed via the link - http://localhost:8080.<p>
+          
+            
+        </div>
+        
+
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+EOF
+echo "finish"
+ls -la
+echo "-------------------deploy----------------"
+scp -v -o StrictHostKeyChecking=no index.html ubuntu@13.50.1.74:/var/www/html
