@@ -1,10 +1,9 @@
-echo "start"
-cat <<EOF > index.html
+<!DOCTYPE html>
 <html>
 
 <head>
-  <title>Jenkins Wiki : Home</title>
-  <link rel="stylesheet" href="styles/site.css" type="text/css" />
+  <title>What is Jenkins?</title>
+  <link href="site.css" type="text/css" />
   <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
 
@@ -16,7 +15,7 @@ cat <<EOF > index.html
           <img src="https://www.jenkins.io/images/logos/jenkins/jenkins.png" height="100" border="0" align="absmiddle"
             alt="Home Page" style="float: none; vertical-align: middle;" />
           <span id="title-text">
-            Jenkins Wiki : Home
+            What is Jenkins?
           </span>
         </h1>
       </div>
@@ -24,18 +23,21 @@ cat <<EOF > index.html
       <div id="content" class="view">
 
         <div id="main-content" class="wiki-content group">
-          <p>You'll find here the <a href="https://github.com/ZalevskaAnna/Demo1">static content of the Wiki</a> exported from Confluence.</p>
-          <p>Available spaces:</p>
-          <ul>
-            <li><a href="">infra</a></li>
-            <li><a href="JA/index.html">JA</a></li>
-            <li><a href="JENKINS/index.html">JENKINS</a></li>
-            <li><a href="JUC/index.html">JUC</a></li>
-            <li><a href="SECURITY/index.html">SECURITY</a></li>
-            <li><a href="SUN/index.html">SUN</a></li>
-          </ul>
+          <p>Jenkins is a self-contained, open source automation server which can be used to automate all sorts of tasks related to building, testing, and delivering or deploying software.</p>
+          Jenkins can be installed through native system packages, Docker, or even run standalone by any machine with a Java Runtime Environment (JRE) installed.</p>
+          <p><b>What is continuous integration?</b></p>
+          <p> <b>Continuous Integration</b> is a development practice that requires developers to regularly integrate code into a shared repository.</p>
+          <p>This concept was intended to address the problem of later detection of issues in the build life cycle.</p>
+          <p>Continuous Integration requires developers to build frequently.</p>
+          <p>The usual practice is that whenever a code commit occurs, a build should run.</p>
+            
         </div>
-
+          <p>Jenkins can be accessed via the link - http://localhost:8080.<p>
+          <img src=”https://www.jenkins.io/doc/book/resources/tutorials/setup-jenkins-01-unlock-jenkins-page.jpg“ height="100" border="0" align="absmiddle"
+          style="float: none; vertical-align: middle;" />
+            
+        </div>
+        
 
 
       </div>
@@ -44,8 +46,3 @@ cat <<EOF > index.html
 </body>
 
 </html>
-EOF
-echo "finish"
-ls -la
-echo "-------------------deploy----------------"
-scp -v -o StrictHostKeyChecking=no index.html ubuntu@13.48.106.116:/var/www/html
