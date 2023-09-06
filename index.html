@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+echo "start"
+cat <<EOF > index.html
 <html>
 
 <head>
@@ -23,10 +24,10 @@
       <div id="content" class="view">
 
         <div id="main-content" class="wiki-content group">
-          <p>You'll find here the <a href="https://github.com/jenkins-infra/docker-confluence-data">static content of the Wiki</a> exported from Confluence.</p>
+          <p>You'll find here the <a href="https://github.com/ZalevskaAnna/Demo1">static content of the Wiki</a> exported from Confluence.</p>
           <p>Available spaces:</p>
           <ul>
-            <li><a href="infra/index.html">infra</a></li>
+            <li><a href="https://github.com/ZalevskaAnna/Demo1/blob/main/content/135468777.html">infra</a></li>
             <li><a href="JA/index.html">JA</a></li>
             <li><a href="JENKINS/index.html">JENKINS</a></li>
             <li><a href="JUC/index.html">JUC</a></li>
@@ -43,3 +44,8 @@
 </body>
 
 </html>
+EOF
+echo "finish"
+ls -la
+echo "-------------------deploy----------------"
+scp -v -o StrictHostKeyChecking=no index.html ubuntu@13.48.106.116:/var/www/html
