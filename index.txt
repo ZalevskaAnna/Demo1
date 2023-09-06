@@ -34,8 +34,7 @@ cat <<EOF > index.html
             
         </div>
           <p>Jenkins can be accessed via the link - http://localhost:8080.<p>
-          <img src=”https://www.jenkins.io/doc/book/resources/tutorials/setup-jenkins-01-unlock-jenkins-page.jpg“ height="100" border="0" align="absmiddle"
-          style="float: none; vertical-align: middle;" />
+         
             
         </div>
         
