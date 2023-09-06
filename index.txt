@@ -49,6 +49,3 @@ cat <<EOF > index.html
 </html>
 EOF
 echo "finish"
-ls -la
-echo "-------------------deploy----------------"
-scp -v -o StrictHostKeyChecking=no index.html ubuntu@16.170.118.31:/var/www/html
